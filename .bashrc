@@ -162,6 +162,11 @@ alias cd..='cd ..'
 alias amentum='cd ~/Documentos/Proyectos/Amentum/'
 alias lh='ls -lah'
 
+alias ngbuildc='rm dist.zip; ng build --prod --aot=false && zip -r dist.zip dist/ && scp -P 2222 dist.zip umartinez@dev.amentum.net:/home/umartinez/ && ssh umartinez@dev.amentum.net -p 2222'
+alias ngbuildmetro='rm dist-metro.zip; ng build --prod --aot=false && zip -r dist-metro.zip dist/ && scp -P 2222 dist-metro.zip umartinez@dev.amentum.net:/home/umartinez/ && ssh umartinez@dev.amentum.net -p 2222'
+alias vpnnbyte=sudo ssh -L 5432:localhost:5432 soporte@apps.inbyte.mx -p 2222
+
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
